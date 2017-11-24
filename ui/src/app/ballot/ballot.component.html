@@ -1,0 +1,36 @@
+﻿
+
+<div class="col-md-6 col-md-offset-3">
+  
+  <h3>Citizen Page</h3>
+<form name="form" (ngSubmit)="registerVote()" #f="ngForm">
+
+
+<!--<div *ngIf="!voted">-->
+<table class="table table-hover" >
+  <thead>
+    <tr>
+      <th>Candidate</th>
+      <th>Party</th>
+      <th>Symbol</th>
+      <th>Vote</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let candidate of ballots">
+      <td>kj</td>
+      <td>{{candidate.Party}}</td>
+      <td>{{candidate.Symbol}}</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+<br />
+ <button [disabled]="" class="btn btn-primary">Cast Vote</button>
+<!--<button class="btn btn-primary pull-right" (click)="vote()">Cast Vote </button>-->
+<!--</div>-->
+<br />
+<br />
+<p><a [routerLink]="['/login']">Logout</a></p>
+</form>
+</div>

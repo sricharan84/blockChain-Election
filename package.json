@@ -1,0 +1,45 @@
+{
+  "name": "CVote",
+  "version": "1.0.0",
+  "description": "A Blockchain based voting app",
+  "main": "server.js",
+  "scripts": {
+    "client": "cd ui && npm start",
+    "server": "nodemon server.js development",
+    "dev": "parallelshell \" npm run client\" \" npm run server\"",
+    "start": "npm run build && node server production",
+    "build": "cd ui && ng build"
+  },
+  "dependencies": {
+    "app-root-path": "^2.0.1",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.2",
+    "composable-middleware": "^0.3.0",
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "express-jwt": "^5.3.0",
+    "jsonwebtoken": "^8.1.0",
+    "mongoose": "^4.12.4",
+    "morgan": "^1.9.0",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "request": "^2.83.0",
+    "request-promise": "^4.2.2",
+    "rootpath": "^0.1.2"
+  },
+  "keywords": [
+    "MEAN",
+    "stack",
+    "Express.js",
+    "MongoDB",
+    "Angular",
+    "Blockchain",
+    "Parity"    
+  ],
+  "author": "hitjoshi@deloitte.com",
+  "license": "ISC",
+  "devDependencies": {
+     "nodemon": "^1.12.1",
+    "parallelshell": "^3.0.2"
+  }
+}
