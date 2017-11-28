@@ -24,9 +24,9 @@
             <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !role.valid }">
             <label for="role">Role</label>
             <select id = "role" name ="role" [(ngModel)]="model.role" #role="ngModel" required >
-            <option value=100>Voter</option>
-            <option value=200>Creator</option>
-            <option value=300>Observer</option>
+            <option value=100>Adjudicator</option>
+            <option value=200>Nominee</option>
+            <option value=300>Citizen</option>
             </select>
             <!-- <input type="text" class="form-control" name="role" [(ngModel)]="model.role" #role="ngModel" required /> -->
             <div *ngIf="f.submitted && !role.valid" class="help-block">Role is required</div>

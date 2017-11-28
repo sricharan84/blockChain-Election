@@ -1,33 +1,24 @@
 <div>
     <p>
         election works!</p>
-      
-        <table class="table table-striped" *ngIf="election">
-          <thead>
-            <tr>
-              <th>ElectionId</th>
-              <th>ConstituencyId</th>
-              <th>ElectionStatus</th>
-              <th>NominationDate</th>
-              <th>ResultDate</th>
-              <th>Results</th>        
-            </tr>
-          </thead>
-          <tbody>
-            <tr *ngFor="let item of election">
-              <td>{{item.ElectionId}}</td>
-              <td>{{item.ConstituencyId}}</td>
-              <td>{{item.ElectionStatus}}</td>
-              <td>{{item.NominationDate}}</td>
-              <td>{{item.ResultDate}}</td>
-              <td>
-                <button class ="btn btn-primary" *ngIf="item.ElectionStatus==0"><a href="/dashboard">Show Results</a></button>
-                <button class ="btn btn-primary" *ngIf="item.ElectionStatus==1"><a href="/ballot">Ballot Box</a></button>
-              </td>
-              
 
-            </tr>
-          </tbody>
-        </table>
+
+        <div class="row">
+          <div class="col-sm-6" *ngFor="let item of election">
+            <div class="election-card">
+                <div class="head">
+                    <div class="row">
+                        <div class="col-sm-2">{{item.ElectionId}}</div>
+                        <div class="col-sm-2">{{item.ConstituencyId}}</div>
+                        <div class="col-sm-8">{{item.NominationDate}}</div>
+                    </div>
+                </div>
+                <div class="foot">
+                    <div class ="text-center" *ngIf="item.ElectionStatus==0"><a href="/dashboard">Show Results</a></div>
+                    <div class ="text-center" *ngIf="item.ElectionStatus==1"><a href="/ballot">Ballot Box</a></div>
+                </div>
+            </div>            
+          </div>
+        </div>
       
 </div>

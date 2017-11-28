@@ -20,6 +20,7 @@ import { BallotComponent } from './ballot/index';
 import { ElectionComponent } from './election/election.component';
 import { ElectionService } from './election/election.service';
 import { BallotService } from './ballot/ballot.service';
+import { AdjudicatorComponent } from './adjudicator/adjudicator.component';
 
 @NgModule({
     imports: [
@@ -38,7 +39,8 @@ import { BallotService } from './ballot/ballot.service';
         DashboardComponent,
         RegisterComponent,
         BallotComponent,
-        ElectionComponent
+        ElectionComponent,
+        AdjudicatorComponent
     ],
     providers: [
         customHttpProvider,

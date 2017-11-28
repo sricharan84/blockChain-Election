@@ -18,8 +18,16 @@ export class BallotService {
 
 
     getBallotBox(): Observable<BallotRes[]> {
-        return this.http.get('/api/ballots')
+        return this.http.get('/api/ballot')
             .map((response: Response) => response.json())
             .catch((error: any) => Observable.throw(error.json().error || 'server error'));
     }
+
+    postBallotBox(vCand): Observable<BallotRes[]> {
+        return this.http.post('/api/ballot',vCand)
+            .map((response: Response) => response.json())
+            .catch((error: any) => Observable.throw(error.json().error || 'server error'));
+    }
+
+
 }

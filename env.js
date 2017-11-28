@@ -9,7 +9,7 @@ var config = {
     port: process.env.PORT || 3000,
     mongoUri: "mongodb://localhost:27017/vElect",
     providerEndpoint: 'http://localhost:8545',
-    seedDB: false,
+    seedDB: true,
     secrets: {
       session: 'mockingjay'
     },
@@ -24,7 +24,7 @@ var config = {
     mode: 'staging',
     port: process.env.PORT || 5000,
     mongoUri: 'mongodb://localhost:27017/bc-kotak',
-    seedDB: false,
+    seedDB: true,
     secrets: {
       session: 'mockingjay'
     },
@@ -39,7 +39,7 @@ var config = {
     port: process.env.PORT || 3000,
     mongoUri: "mongodb://localhost:27017/vElect",
     providerEndpoint: 'http://localhost:8545',
-    seedDB: false,
+    seedDB: true,
     secrets: {
       session: 'mockingjay'
     },

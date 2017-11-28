@@ -12,21 +12,19 @@
     <tr>
       <th>Candidate</th>
       <th>Party</th>
-      <th>Symbol</th>
       <th>Vote</th>
     </tr>
   </thead>
   <tbody>
     <tr *ngFor="let candidate of ballots">
-      <td>kj</td>
-      <td>{{candidate.Party}}</td>
-      <td>{{candidate.Symbol}}</td>
-      <td></td>
+      <td>{{candidate.party}}</td>
+      <td>{{candidate.Candidate}}</td>
+      <td><input type="radio" name="selCandidate" (click)="candDetails(candidate)" /></td>
     </tr>
   </tbody>
 </table>
 <br />
- <button [disabled]="" class="btn btn-primary">Cast Vote</button>
+ <button [disabled]="" class="btn btn-primary pull-right">Cast Vote</button>
 <!--<button class="btn btn-primary pull-right" (click)="vote()">Cast Vote </button>-->
 <!--</div>-->
 <br />

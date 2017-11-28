@@ -1,0 +1,19 @@
+<h3>Adjudicator Home Page</h3>
+<br />
+
+<div class="mv-tile" *ngFor="let adjAction of adjActions"  title="{{adjAction.action}}">
+    <!-- <div class="mv-favicon"><img src="chrome-search://favicon/size/16@1.5x/2/2" title=""></div> -->
+    <!-- <div class="mv-title" style="direction: ltr;">Performance Center</div> -->
+    <!-- <div class="mv-thumb"><img title="Performance Center" src="chrome-search://thumb/2/2"></div> -->
+    <span [routerLink]="adjAction.actionLink">{{adjAction.action}}</span>
+    <!-- <div class="mv-x" role="button" title="Don't show on this page"></div> -->
+</div>
+
+<br />
+<br />
+
+{{name}}
+<div style="margin: 25px;">
+    <input type="text" name="name" [(ngModel)]="name">
+    <button (click)="sendData()"> To Mongo</button>
+</div>

@@ -6,6 +6,8 @@ import { RegisterComponent } from './register/index';
 import { DashboardComponent } from './dashboard/index';
 import { NominationComponent } from './nomination/index';
 import { BallotComponent } from './ballot/index';
+import { AdjudicatorComponent } from './adjudicator/index'
+
 import { ElectionComponent } from './election/election.component';
 import { AuthGuard } from './_guards/index';
 // import { ElectionResolveService } from './election/election.resolve.guard';
@@ -17,6 +19,7 @@ const appRoutes: Routes = [
 	{ path: 'dashboard', component: DashboardComponent },
     { path: 'nomination', component: NominationComponent },
     { path: 'ballot', component: BallotComponent },
+    { path: 'adjhome', component: AdjudicatorComponent, canActivate: [AuthGuard]},
     { path: 'elections', component: ElectionComponent },
 
     // otherwise redirect to home
