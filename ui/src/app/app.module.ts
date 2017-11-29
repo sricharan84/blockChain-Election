@@ -20,7 +20,9 @@ import { BallotComponent } from './ballot/index';
 import { ElectionComponent } from './election/election.component';
 import { ElectionService } from './election/election.service';
 import { BallotService } from './ballot/ballot.service';
+import { GetUsersService } from './get-users/getUsers.service';
 import { AdjudicatorComponent } from './adjudicator/adjudicator.component';
+import { GetUsersComponent } from './get-users/get-users.component';
 
 @NgModule({
     imports: [
@@ -40,7 +42,8 @@ import { AdjudicatorComponent } from './adjudicator/adjudicator.component';
         RegisterComponent,
         BallotComponent,
         ElectionComponent,
-        AdjudicatorComponent
+        AdjudicatorComponent,
+        GetUsersComponent
     ],
     providers: [
         customHttpProvider,
@@ -53,7 +56,8 @@ import { AdjudicatorComponent } from './adjudicator/adjudicator.component';
         ConstituencyService,
         ElectionService,
         VotingService,
-        BallotService
+        BallotService,
+        GetUsersService
 
     ],
     bootstrap: [AppComponent]

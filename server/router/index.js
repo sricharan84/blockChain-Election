@@ -9,6 +9,7 @@ var router = express.Router();
 
 router.use('/api', require('./routes/election'));
 router.use('/api', require('./routes/ballotBox'));
+router.use('/api', require('./routes/getUsers'));
 router.use('/api/user', require('./routes/user'));
 router.use('/api/dashboard', require('./routes/dashboard'));
 router.use('/api/nominations', require('./routes/nomination'));

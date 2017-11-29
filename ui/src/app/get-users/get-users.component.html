@@ -1,0 +1,24 @@
+<p>
+  get-users works!
+</p>
+
+<div>
+
+    <table class="table table-hover" >
+        <thead>
+          <tr>
+            <th>heading</th>
+            <th>email</th>
+            <th>role</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of users">
+            <td>hello</td>
+            <td>{{user.name}}</td>
+            <td>{{user.role}}</td>
+          </tr>
+        </tbody>
+      </table>
+
+</div>

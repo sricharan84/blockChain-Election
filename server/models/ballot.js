@@ -6,7 +6,6 @@
 
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
-//var constituencies = require('./constituency.js');
 
 var ballotSchema = new Schema({
 							party: { type: String, default:"" },
